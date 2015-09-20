@@ -53,7 +53,7 @@
         {
             op.Name = TrimSchemaPrefix(op.Name);
             op.Name = EscapeForeignKeyName(op.Name);
-            op.PrincipalTable = TrimSchemaPrefix(op.PrincipalTable)
+            op.PrincipalTable = TrimSchemaPrefix(op.PrincipalTable);
             op.DependentTable = TrimSchemaPrefix(op.DependentTable);
             return base.Generate(op);
         }
