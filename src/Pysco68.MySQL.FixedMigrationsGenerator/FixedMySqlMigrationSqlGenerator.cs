@@ -43,8 +43,8 @@
         private string TrimSchemaPrefix(string name)
         {
             // I have to do that on my own...
-            if (name.StartsWith("dbo."))
-                return name.Substring(4);
+            if (name.Contains("dbo."))
+                return name.Replace("dbo.", "");
 
             return name;
         }
