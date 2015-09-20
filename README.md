@@ -24,8 +24,11 @@ internal sealed class Configuration : DbMigrationsConfiguration<MyContext>
 {
     public Configuration()
     {
-        AutomaticMigrationsEnabled = false;
-        SetSqlGenerator("MySql.Data.MySqlClient", new FixedMySqlMigrationSqlGenerator()); // <== this is it!
+        SetSqlGenerator("MySql.Data.MySqlClient", new FixedMySqlMigrationSqlGenerator()); 
+
+        /* OR */
+
+        this.SetFixedMySQLMigrationsGenerator();
     }
 
     /* snip */
